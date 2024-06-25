@@ -1,0 +1,121 @@
+.roadmap {
+    --c-roadmap-card: rgba(91, 100, 174, 0.8);
+    position: relative;
+    overflow: hidden;
+
+    background: var(--c-1st);
+    
+    @include universal-padding-y;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        margin-bottom: 60px;
+    }
+
+    &__list {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        column-gap: 120px;
+
+        @include desktop {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 40px;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            &::before {
+                position: absolute;
+                // top указан статично в PX для того, чтобы при увеличении текста в блоке стрелка не съезжала вниз вместе со всем блоком
+                top: 120px;
+                right: -120px;
+                content: "";
+                background: url("./../img/icon/arrow.svg") no-repeat;
+                width: 120px;
+                height: 18px;
+
+                @include desktop {
+                    content: none;
+                }
+            }
+        }
+
+        @include mobile-s {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        &::after {
+            display: block;
+            content: "";
+            background: url("./../img/icon/check-mark.svg") no-repeat;
+            background-size: contain;
+            width: 78px;
+            aspect-ratio: 1;
+            margin: 0 auto;
+            margin-top: 25px;
+
+            @include mobile {
+                width: 42px;
+                margin-top: 15px;
+            }
+        }
+    }
+
+    &-card {
+        background: var(--c-roadmap-card);
+        border-radius: 45px;
+        border-bottom: 3px solid var(--c-shadow);
+        padding: 20px;
+        text-align: center;
+        max-width: 490px;
+
+        @include tablet {
+            border-radius: 25px;
+        }
+
+        @include mobile {
+            border-radius: 16px;
+        }
+
+        &__text {
+            font-size: 35px;
+
+            @include desktop-big {
+                font-size: 28px;
+            }
+
+            @include mobile {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__decoration {
+        &--1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            img {
+                width: 1852px;
+
+                @include tablet {
+                    width: 1000px;
+                }
+            }
+        }
+    }
+}

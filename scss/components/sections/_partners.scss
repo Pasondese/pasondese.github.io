@@ -1,0 +1,118 @@
+.partners {
+    background: var(--c-linear-gradient-accent);
+    position: relative;
+    overflow: hidden;
+
+    @include universal-padding-y;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        margin-bottom: 60px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 100px;
+
+        @include desktop-big {
+            column-gap: 80px;
+        }
+
+        @include tablet {
+            gap: 40px;
+        }
+
+        @include mobile {
+            gap: 15px;
+        }
+    }
+
+    &__item {
+        max-width: 390px;
+        padding: 60px 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: var(--c-linear-gradient-third);
+        border-radius: 40px;
+        transition: var(--transition);
+
+        @include hover {
+            transform: scale(.96);
+        }
+
+        @include tablet {
+            border-radius: 20px;
+        }
+
+        @include mobile {
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        @include mobile-s {
+            padding: 5px;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+    }
+
+    &__decoration {
+        &--1 {
+            position: absolute;
+            top: -80px;
+            left: -30px;
+
+            img {
+                width: 220px;
+                
+                @include mobile {
+                    width: 180px;
+                }
+            }
+        }
+
+        &--2 {
+            position: absolute;
+            top: -50px;
+            right: -10px;
+
+            img {
+                width: 220px;
+                transform: scaleX(-1);
+            }
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        &--3 {
+            position: absolute;
+            bottom: -75px;
+            left: 0;
+            opacity: .4;
+
+            img {
+                width: 220px;
+                transform: scaleY(-1);
+            }
+
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+}

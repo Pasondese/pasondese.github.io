@@ -1,0 +1,39 @@
+.footer {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include universal-padding-y-small;
+    padding-bottom: 0 !important;
+
+    &__title {
+        margin-bottom: 50px;
+
+        @include mobile {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 20px;
+    }
+
+    &__item {
+        transition: var(--transition);
+
+        @include hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__soc1al {
+        max-width: 70px;
+
+        @include mobile {
+            max-width: 24px;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.contract {
+    background: var(--c-linear-gradient-accent);
+
+    @include universal-padding-y;
+
+    &__inner {
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 80px;
+
+        @include mobile {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__copy {
+        text-align: center;
+        margin-bottom: 80px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        @include mobile {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__code {
+        font-size: clamp(0.875rem, 0.086rem + 3.16vw, 3.875rem);
+        padding: 15px 30px;
+        background: rgba(255, 255, 255, .4);
+        border-radius: 65px;
+    }
+
+    &__copy-button {
+        font-family: "TitanOne-Regular";
+        background: var(--c-linear-gradient-accent);
+        border-radius: 0 0 70px 70px;
+        padding: 15px 35px;
+        margin: 0 auto;
+
+        @include tablet {
+            border-radius: 0 0 24px 24px !important;
+        }
+        
+        @include mobile {
+            border-radius: 0 0 20px 20px !important;
+            font-size: 24px;
+            padding: 5px 25px;
+        }
+    }
+
+    &__button {
+        font-size: 54px;
+
+        @include mobile {
+            font-size: 36px !important;
+        }
+
+        @include mobile-s {
+            font-size: 24px !important;
+        }
+    }
+}

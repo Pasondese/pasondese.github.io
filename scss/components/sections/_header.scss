@@ -1,0 +1,187 @@
+.header {
+    position: relative;
+    @include universal-padding-y-small;
+
+    @include desktop-big {
+        z-index: 100;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        @include desktop-big {
+            justify-content: flex-end;
+        }
+    }
+
+    .nav {
+        display: flex;
+        column-gap: 64px;
+        position: relative;
+
+        &__list {
+            display: flex;
+            column-gap: 64px;
+
+            max-width: 1040px;
+            overflow-x: auto;
+
+            @include desktop-big {
+                row-gap: 20px;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                overflow: visible;
+            }
+
+            @include mobile {
+                row-gap: 10px;
+            }
+        }
+
+        &__link {
+            position: relative;
+            font-size: 32px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background: var(--c-light);
+                width: 0;
+                height: 4px;
+                border-radius: 4px;
+                transition: var(--transition);
+            }
+
+            @include mobile {
+                font-size: 26px;
+            }
+
+            @include hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        @include desktop-big {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100dvh;
+            transform: translateY(-150%);
+            background: var(--c-dark);
+            transition: var(--transition);
+
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            row-gap: 40px;
+            padding: 100px;
+            overflow: hidden auto;
+
+            &--active {
+                transform: none;
+            }
+
+            @include mobile-s {
+                padding: 100px 50px;
+            }
+        }
+    }
+
+    &__button {
+        border-radius: 100px !important;
+    }
+
+    &__burger {
+        position: relative;
+        display: none;
+        width: 50px;
+        height: 30px;
+
+        &-line {
+            display: block;
+            width: 100%;
+            height: 5px;
+            background: var(--c-light);
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 100%;
+            height: 5px;
+            background: var(--c-light);
+            border-radius: 6px;
+            transform-origin: center;
+            transition: var(--transition);
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        &--active {
+            .header__burger-line {
+                width: 0;
+            }
+
+            &::before {
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &::after {
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+
+        @include desktop-big {
+            display: block;
+        }
+    }
+
+    &__decoration {
+
+        &--1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            img {
+                width: 250px;
+
+                @include desktop-big {
+                    width: 200px;
+                }
+
+                @include mobile {
+                    width: 150px;
+                }
+
+                @include mobile-s {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}

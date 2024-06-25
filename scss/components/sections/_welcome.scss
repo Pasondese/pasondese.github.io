@@ -1,0 +1,59 @@
+.welcome {
+
+    @include universal-padding-y-small;
+    padding-top: 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        position: relative;
+        z-index: 1;
+
+        @include desktop-big {
+            row-gap: 80px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__img {
+        width: 646px;
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile-s {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__text {
+        max-width: 780px;
+
+        @include tablet {
+            max-width: 100%;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-size: 152px;
+        margin-bottom: 30px;
+
+        @include desktop-mid {
+            // 70px - 100px / 400px - 1440px (https://min-max-calculator.9elements.com/)
+            font-size: clamp(4.375rem, 3.654rem + 2.88vw, 6.25rem);
+        }
+    }
+
+    // &__description {
+
+    //     @include desktop-mid {
+    //         // 18px - 40px / 400px - 1440px (https://min-max-calculator.9elements.com/)
+    //         font-size: clamp(1.125rem, 0.596rem + 2.12vw, 2.5rem);
+    //     }
+    // }
+}

@@ -1,0 +1,143 @@
+.body--not-scroll {
+    overflow: hidden;
+}
+
+.wrapper {
+    max-width: calc(var(--container-width) + var(--wrapper-padding) * 2);
+    padding: var(--wrapper-padding);
+    margin: 0 auto;
+
+    @include mobile {
+        --wrapper-padding: 10px;
+        padding: var(--wrapper-padding);
+    }
+}
+
+.container {
+    max-width: calc(var(--container-width) + var(--section-padding-x) * 2);
+    margin: 0 auto;
+    padding: 0 var(--section-padding-x);
+
+    @include mobile {
+        --section-padding-x: 50px;
+
+    }
+
+    @include mobile-s {
+        --section-padding-x: 20px;
+    }
+}
+
+.title {
+    // 34px - 66px / 400px - 1366px (https://min-max-calculator.9elements.com/)
+    font-size: clamp(2.125rem, 1.297rem + 3.31vw, 4.125rem);
+
+    &--white {
+        color: var(--c-light);
+        text-shadow: 0 6px 0 var(--c-shadow);
+    }
+
+    &--white-no-shadow {
+        color: var(--c-light);
+    }
+
+    &--colored {
+        color: var(--c-text-1st);
+        text-shadow: 0 6px 0 rgba(255, 255, 255, .4);
+    }
+}
+
+.description {
+    // 22px - 40px / 400px - 1366px (https://min-max-calculator.9elements.com/)
+    font-size: clamp(1.375rem, 0.909rem + 1.86vw, 2.5rem);
+}
+
+.logic-block {
+    margin-bottom: 60px;
+    border-radius: var(--section-border-radius);
+
+    @include tablet {
+        --section-border-radius: 28px;
+    }
+
+    @include mobile {
+        margin-bottom: 15px;
+    }
+}
+
+.global-button {
+    font-family: "TitanOne-Regular";
+    color: var(--c-light);
+    padding: 6px 30px;
+    border-radius: 100px;
+    border-bottom: 2px solid var(--c-shadow);
+    font-size: 30px;
+    transition: var(--transition);
+    letter-spacing: 2px;
+
+    &--1st-theme {
+        background: var(--c-linear-gradient-accent);
+    }
+
+    &--text-shadow-theme {
+        background: var(--c-linear-gradient-accent);
+        text-shadow: 0 3px 4px var(--c-shadow);
+        font-size: 36px;
+    }
+
+    @include tablet {
+        border-radius: 24px !important;
+    }
+
+    @include mobile {
+        border-radius: 16px !important;
+        font-size: 20px !important;
+    }
+
+    @include hover {
+        transform: scale(1.04);
+    }
+}
+
+.global-img {
+    padding: 30px;
+    background: var(--c-linear-gradient-fourth);
+    backdrop-filter: blur(8px);
+    border-radius: 94px;
+    width: 670px;
+
+    @include desktop-big {
+        width: 450px;
+    }
+
+    @include desktop {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    @include tablet {
+        border-radius: 16px;
+        padding: 15px;
+    }
+
+    &--1st-theme {
+        border-bottom: 3px solid var(--c-shadow);
+    }
+
+    &--2nd-theme {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    }
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}

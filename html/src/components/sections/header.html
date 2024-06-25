@@ -1,0 +1,39 @@
+<!-- header и welcome не имеют класса logic-block, т.к. он задан для их родителя "start" в index.html -->
+<header class="header container">
+    <div class="header__inner">
+        <nav class="header__nav nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Presale</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Roadmap</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Tokenomiks</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Partners</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Address</a>
+                </li>
+            </ul>
+            <button class="header__button global-button global-button--1st-theme">Buy Spunge</button>
+        </nav>
+        
+        <button class="header__burger" title="Open menu">
+            <!-- класс header__burger- -active преобразует бургер кнопку в крестик -->
+            <span class="header__burger-line"></span>
+        </button>
+
+    </div>
+
+    <picture class="header__decoration--1">
+        <source srcset="./img/decoration/jellyfish-with-flower.webp" type="image/webp">
+        <img src="./img/decoration/jellyfish-with-flower.png" alt="Decoration">
+    </picture>
+</header>

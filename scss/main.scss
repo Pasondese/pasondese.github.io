@@ -1,0 +1,22 @@
+@import "./reset",
+        "./mixin",
+        "./fonts",
+        "./media",
+        "./vars",
+        "./utils",
+        "./global";
+
+@import "./components/modal/modal";
+
+@import "./components/blocks/presale-stage";
+
+@import "./components/sections/start",
+        "./components/sections/header",
+        "./components/sections/welcome",
+        "./components/sections/presale",
+        "./components/sections/roadmap",
+        "./components/sections/tokenomics",
+        "./components/sections/secure",
+        "./components/sections/partners",
+        "./components/sections/contract",
+        "./components/sections/footer";

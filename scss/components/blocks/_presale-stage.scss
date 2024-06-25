@@ -1,0 +1,249 @@
+.p-stage {
+    --p-stage-button-small-gradient: linear-gradient(to left, #0B518D, #187D93);
+
+    position: relative;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    background: var(--c-linear-gradient-fourth);
+    padding: 25px 30px;
+    border-radius: 80px;
+    border-bottom: 4px solid var(--c-shadow);
+
+    @include tablet {
+        border-radius: 24px;
+    }
+
+    @include mobile {
+        padding: 15px;
+    }
+
+    h2,
+    h3 {
+        font-size: 48px;
+        text-align: center;
+        line-height: 1.2;
+
+        @include desktop-big {
+            font-size: 34px;
+        }
+
+        @include mobile-s {
+            font-size: 22px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .p-stage-time {
+        margin-bottom: 35px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+        background: var(--c-linear-gradient-accent);
+        border-radius: 50px;
+        padding: 10px 15px;
+        column-gap: 10px;
+
+        &__length {
+            font-size: 36px;
+
+            @include tablet {
+                font-size: 24px;
+            }
+
+            @include mobile {
+                font-size: 18px;
+            }
+        }
+
+        &__quantity {
+            font-family: "TitanOne-Regular";
+
+            @include tablet {
+                font-size: 32px;
+            }
+
+            @include mobile {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .p-stage-funds {
+        margin-bottom: 25px;
+
+        &__title {
+            margin-bottom: 25px;
+        }
+
+        &__line {
+            width: 100%;
+            background: var(--c-light);
+            color: var(--c-dark);
+            text-shadow: 0 4px 0 var(--c-shadow);
+            border-radius: 50px;
+            text-align: center;
+            font-size: 36px;
+            padding: 4px 0;
+
+            @include mobile {
+                font-size: 24px;
+            }
+
+            &--fully {
+                background: #0453ff;
+            }
+        }
+    }
+
+    .p-stage-price {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin-bottom: 25px;
+        column-gap: 20px;
+
+        @include mobile-s {
+            justify-content: space-between;
+        }
+
+        &__title {
+            font-size: 28px;
+
+            @include tablet {
+                font-size: 22px;
+            }
+        }
+
+        &__quantity {
+            font-size: 30px;
+            font-family: "TitanOne-Regular";
+            text-shadow: 0 4px 0 var(--c-shadow);
+
+            @include tablet {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .p-stage-listing {
+
+        &__title {
+            font-size: 28px;
+            background: var(--c-linear-gradient-second);
+            border-radius: 50px;
+            padding: 18px;
+            margin-bottom: 10px;
+
+            @include desktop-big {
+                font-size: 24px;
+            }
+
+            @include mobile-s {
+                font-size: 16px;
+            }
+        }
+
+        &__description {
+            font-size: 22px;
+            text-align: center;
+
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__button {
+        font-size: 36px;
+        margin: 0 auto;
+        margin-top: 25px;
+        background: var(--c-linear-gradient-second);
+
+        @include desktop-mid {
+            font-size: 28px;
+        }
+    }
+
+    .form {
+        width: 100%;
+        margin-bottom: 25px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .field {
+            text-align: left;
+
+            &__input {
+                padding: 15px 25px;
+                font-size: 22px;
+                width: 100%;
+                border: 1px solid var(--c-shadow);
+                border-radius: 16px;
+
+                @include mobile-s {
+                    font-size: 16px;
+                }
+
+                &::placeholder {
+                    opacity: .6;
+                }
+            }
+
+            &__label {
+                font-size: 22px;
+                margin-left: 15px;
+
+                @include mobile-s {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &__button {
+            margin-top: 25px;
+            background: var(--c-linear-gradient-second);
+        }
+    }
+
+    &__button {
+        &--small {
+            font-size: 16px;
+            background: var(--p-stage-button-small-gradient);
+            margin-top: 0;
+
+            @include mobile {
+                font-size: 14px !important;
+            }
+        }
+    }
+
+    &__decoration {
+        &--1 {
+            position: absolute;
+            top: -50px;
+            right: -10px;
+            transform: rotate(35deg);
+
+            img {
+                width: 50px;
+            }
+
+            @include tablet {
+                top: -55px;
+                right: -30px;
+                transform: rotate(35deg);
+            }
+
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+}

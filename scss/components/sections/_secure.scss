@@ -1,0 +1,116 @@
+.secure {
+    background: var(--c-linear-gradient-second);
+    position: relative;
+    overflow: hidden;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 80px;
+        position: relative;
+        z-index: 1;
+
+        @include desktop {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        @include mobile {
+            row-gap: 20px;
+        }
+
+        @include universal-padding-y;
+    }
+
+    &__text {
+        max-width: 850px;
+        margin-top: 75px;
+
+        @include desktop-big {
+            margin: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+
+        @include mobile {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__img {
+        margin-bottom: 40px;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px 40px;
+    }
+
+    &__decoration {
+        &--1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            img {
+                width: 1852px;
+
+                @include tablet {
+                    width: 1000px;
+                }
+            }
+        }
+
+        &--2 {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            
+            img {
+                width: 70px;
+                transform: scaleX(-1);
+            }
+
+            @include mobile {
+                top: 0;
+                right: 5px;
+
+                img {
+                    width: 50px;
+                }
+            }
+        }
+
+        &--3 {
+            position: absolute;
+            left: 50%;
+            bottom: 40px;
+
+            @include desktop {
+                top: 50%;
+                transform: translateY(-50%);
+                bottom: auto;
+                left: auto;
+                right: -75px;
+            }
+
+            @include mobile {
+                right: -25px;
+            }
+
+            img {
+                width: 200px;
+                transform: scaleX(-1);
+
+                @include mobile {
+                    width: 75px;
+                }
+            }
+        }
+    }
+}

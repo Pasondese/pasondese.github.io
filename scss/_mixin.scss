@@ -1,0 +1,24 @@
+@mixin universal-padding-y {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @include mobile {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@mixin universal-padding-y-small {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include mobile {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    @include mobile-s {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}

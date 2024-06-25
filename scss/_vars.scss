@@ -1,0 +1,23 @@
+:root {
+    --container-width: 1850px;
+    --section-padding-x: 60px;
+    --wrapper-padding: 35px;
+
+    --start-block-border-radius: 100px;
+    --section-border-radius: 50px;
+
+    --page-min-width: 280px;
+
+    --c-light: #FFFFFF;
+    --c-dark: #000000;
+    --c-shadow: #e9c630;
+    --c-1st: #57B0FF;
+    --c-linear-gradient-accent: linear-gradient(to left, #1289F1, #34DBFF);
+    --c-linear-gradient-second: linear-gradient(to left, #76FFA4, #58CFF4, #58CFF4);
+    --c-linear-gradient-third: linear-gradient(to bottom, rgba(192, 243, 255, .35), rgba(51, 216, 255, .53));
+    --c-linear-gradient-fourth: linear-gradient(to bottom, rgba(51, 216, 255, .53), rgba(192, 243, 255, .35));
+    --c-linar-gradient-fiveth: linear-gradient(to right, #244E73, #4F6F90);
+    --c-text-1st: #EFFF8D;
+
+    --transition: all ease .3s;
+}

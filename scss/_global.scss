@@ -1,0 +1,51 @@
+* {
+    scrollbar-width: thin;
+}
+
+body {
+    font-family: "MadimiOne-Regular";
+    font-size: 40px;
+    color: var(--c-light);
+    background-color: var(--c-dark);
+
+    a {
+        color: var(--c-light);
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+noscript {
+    position: fixed;
+    font-size: 40px;
+    width: 100vw;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+
+    z-index: 99999;
+    background: var(--c-dark);
+    color: var(--c-light);
+
+    @include mobile {
+        font-size: 24px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
+    font-family: "TitanOne-Regular";
+}
+
+*:focus-visible {
+    outline: 4px dashed var(--c-dark);
+    transition: none !important;
+}

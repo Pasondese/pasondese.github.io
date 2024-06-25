@@ -1,0 +1,104 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    margin: 0 auto;
+    z-index: 9999;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    overflow: hidden auto;
+
+    border-radius: 0 0 100px 100px;
+    background: url("./../img/decoration/modal-bg.webp") no-repeat, var(--c-linar-gradient-fiveth);
+    background-position: center;
+
+    @include desktop-big {
+        border-radius: 0;
+    }
+
+    @include tablet {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 40px;
+
+        @include desktop {
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        margin-bottom: 60px;
+        margin-left: 30px;
+
+        @include tablet {
+            row-gap: 20px;
+        }
+    }
+
+    &__item {
+        list-style-type: decimal;
+
+        &::marker {
+            @include tablet {
+                font-size: 28px;
+            }
+
+            @include mobile {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__step {
+        @include tablet {
+            font-size: 28px;
+        }
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    &__note {
+        font-size: 36px;
+        max-width: 850px;
+        background: var(--c-linear-gradient-accent);
+        text-align: center;
+        padding: 8px 50px;
+        border-radius: 100px;
+        margin: 0 auto;
+
+        @include tablet {
+            font-size: 32px;
+        }
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+
+    &__img-picture {
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,54 @@
+.start {
+    position: relative;
+
+    background: var(--c-linear-gradient-accent);
+    border-radius: var(--start-block-border-radius);
+    overflow: hidden;
+
+    @include tablet {
+        --start-block-border-radius: 58px;
+    }
+
+    @include mobile-s {
+        --start-block-border-radius: 36px;
+    }
+
+    &__decoration {
+        &--1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            img {
+                width: 660px;
+
+                @include desktop {
+                    width: 400px;
+                }
+            }
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        &--2 {
+            position: absolute;
+            bottom: -40px;
+            right: -20px;
+            transform: scaleX(-1);
+
+            img {
+                width: 200px;
+
+                @include desktop{
+                    width: 175px;
+                }
+            }
+
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+}

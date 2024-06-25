@@ -1,0 +1,105 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+
+    min-height: 100%;
+    overflow: auto;
+
+    // Fix hyphenation
+    word-wrap: break-word;
+
+    // Fix rendering fonts
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    // Fix text zoom on Mobile Devices
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+
+    // Fix tap color
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    // Remove 300ms delay on Mobile Devices
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+ul,
+li,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+hr {
+    margin: 0;
+}
+
+input,
+textarea,
+select,
+button,
+details,
+summary,
+article,
+section {
+    font: inherit;
+}
+
+button {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+svg {
+    vertical-align: middle;
+    }
+    
+    svg * {
+        transition-property: fill, stroke;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+details::-webkit-details-marker,
+summary::-webkit-details-marker {
+    display: none;
+}
