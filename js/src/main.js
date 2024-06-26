@@ -29,3 +29,16 @@ if (document.querySelector(".header")) {
         });
     });
 }
+
+
+let howto = 0;
+
+function toggle_howto() {
+    if (howto == 0) {
+        document.getElementById("modal-howto").style.display = "block"
+        howto = 1
+    } else {
+        document.getElementById("modal-howto").style.display = "none"
+        howto = 0
+    }
+}
