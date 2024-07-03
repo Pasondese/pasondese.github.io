@@ -179,6 +179,8 @@
 
         .field {
             text-align: left;
+            width: 100%;
+            position: relative;
 
             &__input {
                 padding: 15px 25px;
@@ -194,6 +196,16 @@
                 &::placeholder {
                     opacity: .6;
                 }
+            }
+
+            &__ico {
+                align-items: right;
+                vertical-align: baseline;
+                position: absolute;
+                right: 5px;
+                bottom: 5px;
+                pointer-events: none;
+                width: 48px;
             }
 
             &__label {
